@@ -1,0 +1,2 @@
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\Updater\bin\Release\net8.0\publish\win-x64\Updater.pdb
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\Updater\bin\Release\net8.0\publish\win-x64\Updater.exe

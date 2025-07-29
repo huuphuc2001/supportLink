@@ -1,0 +1,63 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7A5242-54DB-4660-AA6F-A35ADAAFA964}|supportlink\\supportlink.csproj|c:\\users\\rog strix\\downloads\\sourcemvc\\supportlink\\supportlink\\scheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE7A5242-54DB-4660-AA6F-A35ADAAFA964}|supportlink\\supportlink.csproj|solutionrelative:supportlink\\scheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE7A5242-54DB-4660-AA6F-A35ADAAFA964}|supportlink\\supportlink.csproj|c:\\users\\rog strix\\downloads\\sourcemvc\\supportlink\\supportlink\\scheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DE7A5242-54DB-4660-AA6F-A35ADAAFA964}|supportlink\\supportlink.csproj|solutionrelative:supportlink\\scheduleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 166,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScheduleForm.cs",
+              "DocumentMoniker": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\supportlink\\ScheduleForm.cs",
+              "RelativeDocumentMoniker": "supportlink\\ScheduleForm.cs",
+              "ToolTip": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\supportlink\\ScheduleForm.cs",
+              "RelativeToolTip": "supportlink\\ScheduleForm.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAkwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T09:00:35.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScheduleForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\supportlink\\ScheduleForm.cs",
+              "RelativeDocumentMoniker": "supportlink\\ScheduleForm.cs",
+              "ToolTip": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\supportlink\\ScheduleForm.cs [Design]",
+              "RelativeToolTip": "supportlink\\ScheduleForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T09:00:15.253Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 29,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

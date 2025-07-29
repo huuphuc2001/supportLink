@@ -1,0 +1,2 @@
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\win-x64\supportlink.pdb
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\win-x64\supportlink.exe

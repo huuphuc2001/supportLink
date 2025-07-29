@@ -1,0 +1,17 @@
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Debug\net8.0-windows\supportlink.exe
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Debug\net8.0-windows\supportlink.deps.json
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Debug\net8.0-windows\supportlink.runtimeconfig.json
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Debug\net8.0-windows\supportlink.dll
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Debug\net8.0-windows\supportlink.pdb
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.csproj.GenerateResource.cache
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.AssemblyInfoInputs.cache
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.AssemblyInfo.cs
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.csproj.CoreCompileInputs.cache
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.dll
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\refint\supportlink.dll
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.pdb
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.genruntimeconfig.cache
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\ref\supportlink.dll
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.Properties.Resources.resources
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\obj\Debug\net8.0-windows\supportlink.SupportLink.resources

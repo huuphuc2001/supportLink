@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\obj",
+    "\\obj\\Debug",
+    "\\obj\\Release",
+    "\\obj\\Release\\net8.0-windows",
+    "\\Properties"
+  ],
+  "SelectedNode": "\\Properties\\Resources.resx",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,5 @@
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\supportlink.exe
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\supportlink.dll
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\supportlink.deps.json
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\supportlink.runtimeconfig.json
+C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\bin\Release\net8.0-windows\publish\supportlink.pdb
