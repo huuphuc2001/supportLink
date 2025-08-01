@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y+u3aBW0fMI=",
+  "dgSpecHash": "5d7V1LQoNkY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROG STRIX\\Downloads\\SourceMvc\\supportlink\\supportlink\\supportlink.csproj",
+  "projectFilePath": "C:\\Users\\ROG STRIX\\Downloads\\Source\\supportLink\\supportlink\\supportlink.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROG STRIX\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.18\\microsoft.net.illink.tasks.8.0.18.nupkg.sha512",
     "C:\\Users\\ROG STRIX\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.18\\microsoft.aspnetcore.app.runtime.win-x64.8.0.18.nupkg.sha512",

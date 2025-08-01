@@ -19,7 +19,7 @@ namespace supportlink
         {
 
             InitializeComponent();
-            comboRepeat.Items.AddRange(new[] { "Daily", "Weekly", "Monthly" });
+            comboRepeat.Items.AddRange(new[] { "Theo ngày", "Theo tuần", "Theo tháng" });
 
             // Hoặc nếu muốn thêm mặc định:
             comboRepeat.SelectedIndex = 0;

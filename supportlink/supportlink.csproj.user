@@ -4,6 +4,9 @@
     <_LastSelectedProfileId>C:\Users\ROG STRIX\Downloads\SourceMvc\supportlink\supportlink\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="FormLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ScheduleForm.cs">
       <SubType>Form</SubType>
     </Compile>

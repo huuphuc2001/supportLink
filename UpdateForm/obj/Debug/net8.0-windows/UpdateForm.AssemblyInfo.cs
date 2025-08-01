@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UpdateForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29dcf35f0d50eaf3f887ca41c12af51bdc8c54f")]
 [assembly: System.Reflection.AssemblyProductAttribute("UpdateForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UpdateForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

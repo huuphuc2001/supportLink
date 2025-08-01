@@ -83,7 +83,7 @@ namespace supportlink
             taskGroupBox.Size = new Size(300, 150);
             taskGroupBox.TabIndex = 0;
             taskGroupBox.TabStop = false;
-            taskGroupBox.Text = "Select Task";
+            taskGroupBox.Text = "Chọn task";
             // 
             // radioShutdown
             // 
@@ -91,7 +91,7 @@ namespace supportlink
             radioShutdown.Name = "radioShutdown";
             radioShutdown.Size = new Size(104, 24);
             radioShutdown.TabIndex = 0;
-            radioShutdown.Text = "Shutdown";
+            radioShutdown.Text = "Tắt nguồn máy";
             // 
             // radioRestart
             // 
@@ -99,7 +99,7 @@ namespace supportlink
             radioRestart.Name = "radioRestart";
             radioRestart.Size = new Size(104, 24);
             radioRestart.TabIndex = 1;
-            radioRestart.Text = "Restart";
+            radioRestart.Text = "Khởi động lại";
             // 
             // radioLogoff
             // 
@@ -107,7 +107,7 @@ namespace supportlink
             radioLogoff.Name = "radioLogoff";
             radioLogoff.Size = new Size(104, 24);
             radioLogoff.TabIndex = 2;
-            radioLogoff.Text = "Log off";
+            radioLogoff.Text = "Đăng xuất";
             // 
             // radioSleep
             // 
@@ -115,7 +115,7 @@ namespace supportlink
             radioSleep.Name = "radioSleep";
             radioSleep.Size = new Size(104, 24);
             radioSleep.TabIndex = 3;
-            radioSleep.Text = "Sleep";
+            radioSleep.Text = "Ngủ";
             // 
             // radioLock
             // 
@@ -123,7 +123,7 @@ namespace supportlink
             radioLock.Name = "radioLock";
             radioLock.Size = new Size(104, 24);
             radioLock.TabIndex = 4;
-            radioLock.Text = "Lock screen";
+            radioLock.Text = "Khoá màn hình";
             // 
             // radioCloseApps
             // 
@@ -131,7 +131,7 @@ namespace supportlink
             radioCloseApps.Name = "radioCloseApps";
             radioCloseApps.Size = new Size(104, 24);
             radioCloseApps.TabIndex = 5;
-            radioCloseApps.Text = "Close applications";
+            radioCloseApps.Text = "Đóng tất cả app đang chạy";
             // 
             // scheduleGroupBox
             // 
@@ -149,7 +149,7 @@ namespace supportlink
             scheduleGroupBox.Size = new Size(491, 150);
             scheduleGroupBox.TabIndex = 1;
             scheduleGroupBox.TabStop = false;
-            scheduleGroupBox.Text = "Schedule Time";
+            scheduleGroupBox.Text = "Đặt lịch";
             // 
             // radioNow
             // 
@@ -157,7 +157,7 @@ namespace supportlink
             radioNow.Name = "radioNow";
             radioNow.Size = new Size(104, 24);
             radioNow.TabIndex = 0;
-            radioNow.Text = "Now";
+            radioNow.Text = "Ngay bây giờ";
             // 
             // radioAfter
             // 
@@ -165,7 +165,7 @@ namespace supportlink
             radioAfter.Name = "radioAfter";
             radioAfter.Size = new Size(104, 24);
             radioAfter.TabIndex = 1;
-            radioAfter.Text = "From now";
+            radioAfter.Text = "Sau khoảng thời gian";
             // 
             // radioRepeat
             // 
@@ -173,20 +173,20 @@ namespace supportlink
             radioRepeat.Name = "radioRepeat";
             radioRepeat.Size = new Size(104, 24);
             radioRepeat.TabIndex = 2;
-            radioRepeat.Text = "Repeat";
+            radioRepeat.Text = "Lặp lại";
             // 
             // numHour
             // 
-            numHour.Location = new Point(194, 45);
+            numHour.Location = new Point(171, 45);
             numHour.Name = "numHour";
-            numHour.Size = new Size(64, 27);
+            numHour.Size = new Size(87, 27);
             numHour.TabIndex = 3;
             // 
             // numMinute
             // 
-            numMinute.Location = new Point(343, 45);
+            numMinute.Location = new Point(307, 45);
             numMinute.Name = "numMinute";
-            numMinute.Size = new Size(54, 27);
+            numMinute.Size = new Size(90, 27);
             numMinute.TabIndex = 4;
             // 
             // labelHour
@@ -195,7 +195,7 @@ namespace supportlink
             labelHour.Name = "labelHour";
             labelHour.Size = new Size(58, 23);
             labelHour.TabIndex = 5;
-            labelHour.Text = "Hour(s)";
+            labelHour.Text = "Giờ";
             // 
             // labelMinute
             // 
@@ -203,7 +203,7 @@ namespace supportlink
             labelMinute.Name = "labelMinute";
             labelMinute.Size = new Size(73, 23);
             labelMinute.TabIndex = 6;
-            labelMinute.Text = "Minute(s)";
+            labelMinute.Text = "Phút";
             // 
             // comboRepeat
             // 
@@ -228,24 +228,24 @@ namespace supportlink
             labelStatus.Name = "labelStatus";
             labelStatus.Size = new Size(600, 23);
             labelStatus.TabIndex = 2;
-            labelStatus.Text = "Waiting for task selection...";
+            labelStatus.Text = "Chờ chọn task...";
             // 
             // btnStartTask
             // 
             btnStartTask.Location = new Point(20, 230);
             btnStartTask.Name = "btnStartTask";
-            btnStartTask.Size = new Size(75, 37);
+            btnStartTask.Size = new Size(122, 37);
             btnStartTask.TabIndex = 3;
-            btnStartTask.Text = "Start Task";
+            btnStartTask.Text = "Bắt đầu Task";
             btnStartTask.Click += BtnStartTask_Click;
             // 
             // btnCancelTask
             // 
-            btnCancelTask.Location = new Point(130, 230);
+            btnCancelTask.Location = new Point(169, 230);
             btnCancelTask.Name = "btnCancelTask";
-            btnCancelTask.Size = new Size(75, 37);
+            btnCancelTask.Size = new Size(140, 37);
             btnCancelTask.TabIndex = 4;
-            btnCancelTask.Text = "Cancel Task";
+            btnCancelTask.Text = "Huỷ Task";
             btnCancelTask.Click += BtnCancelTask_Click;
             // 
             // ScheduleForm
@@ -257,7 +257,7 @@ namespace supportlink
             Controls.Add(btnStartTask);
             Controls.Add(btnCancelTask);
             Name = "ScheduleForm";
-            Text = "Schedule Windows Task";
+            Text = "Hẹn giờ tắt";
             taskGroupBox.ResumeLayout(false);
             scheduleGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numHour).EndInit();

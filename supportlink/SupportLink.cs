@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using WshRuntime = IWshRuntimeLibrary;
 
 namespace supportlink
 {
@@ -13,12 +15,32 @@ namespace supportlink
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            CreateDesktopShortcut();
             UpdateTokenLabel();
             SelectBranchFromIniFile();
             comboBox1.DataSource = new BindingSource(linkDictionary, null);
             comboBox1.DisplayMember = "Key";   // Tên hiển thị
             comboBox1.ValueMember = "Value";   // Giá trị URL
 
+        }
+
+        [DllImport("mpr.dll")]
+        private static extern int WNetAddConnection2(ref NETRESOURCE netResource, string password, string username, int flags);
+
+        [DllImport("mpr.dll")]
+        private static extern int WNetCancelConnection2(string name, int flags, bool force);
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct NETRESOURCE
+        {
+            public int dwScope;
+            public int dwType;
+            public int dwDisplayType;
+            public int dwUsage;
+            public string lpLocalName;
+            public string lpRemoteName;
+            public string lpComment;
+            public string lpProvider;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -272,39 +294,130 @@ namespace supportlink
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        //private void button6_Click(object sender, EventArgs e)
+        //{
+        //    string networkPath = @"\\10.144.10.250\fastnet";
+        //    string username = @"administrator";
+        //    string password = @"Agribank@la";
+
+        //    // Đường dẫn nguồn và đích
+        //    string sourceFolder = @"\\10.144.10.250\fastnet\@@@@PHIENBAN IPCAS\AUTOUPDATE\IPCAS2\Bin";
+        //    string destinationFolder = @"C:\IPCAS2\Bin";
+
+        //    NETRESOURCE nr = new NETRESOURCE
+        //    {
+        //        dwType = 1, // Disk resource
+        //        lpLocalName = null, // Không map ổ đĩa cụ thể
+        //        lpRemoteName = networkPath,
+        //        lpProvider = null
+        //    };
+
+        //    try
+        //    {
+        //        // Kết nối network share với tài khoản chỉ định
+        //        int result = WNetAddConnection2(ref nr, password, username, 0);
+        //        if (result != 0)
+        //        {
+        //            MessageBox.Show("Không thể kết nối tới share mạng, mã lỗi: " + result, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
+
+        //        // Bắt đầu copy như bạn đang làm
+        //        if (!Directory.Exists(sourceFolder))
+        //        {
+        //            MessageBox.Show("Không tìm thấy thư mục nguồn @@@@PHIENBAN IPCAS!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            WNetCancelConnection2(networkPath, 0, true);
+        //            return;
+        //        }
+
+        //        if (Directory.Exists(destinationFolder))
+        //        {
+        //            Directory.Delete(destinationFolder, true);
+        //        }
+
+        //        Directory.CreateDirectory(destinationFolder);
+
+        //        CopyAllFiles(sourceFolder, destinationFolder);
+
+        //        MessageBox.Show("Đã sao chép và thay thế IPCAS thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //        // Ngắt kết nối sau khi xong
+        //        WNetCancelConnection2(networkPath, 0, true);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi khi sao chép IPCAS: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        WNetCancelConnection2(networkPath, 0, true);
+        //    }
+        //}
+
+        private async void button6_Click(object sender, EventArgs e)
         {
+            string networkPath = @"\\10.144.10.250\fastnet";
+            string username = @"administrator";
+            string password = @"Agribank@la";
+
             string sourceFolder = @"\\10.144.10.250\fastnet\@@@@PHIENBAN IPCAS\AUTOUPDATE\IPCAS2\Bin";
             string destinationFolder = @"C:\IPCAS2\Bin";
 
+            NETRESOURCE nr = new NETRESOURCE
+            {
+                dwType = 1,
+                lpLocalName = null,
+                lpRemoteName = networkPath,
+                lpProvider = null
+            };
+
+            // Tạo form loading (giả sử bạn đã có form này)
+            FormLoading loadingForm = new FormLoading();
+            // Tính vị trí để đặt ở giữa form cha
+            loadingForm.StartPosition = FormStartPosition.Manual;
+            loadingForm.Location = new Point(
+                this.Location.X + (this.Width - loadingForm.Width) / 2,
+                this.Location.Y + (this.Height - loadingForm.Height) / 2);
+
             try
             {
-                // Kiểm tra folder nguồn có tồn tại không
-                if (!Directory.Exists(sourceFolder))
+                // Hiển thị form loading không modal (show)
+                loadingForm.Show();
+
+                // Chạy việc kết nối và copy trên luồng khác, tránh UI bị đơ
+                await Task.Run(() =>
                 {
-                    MessageBox.Show("Không tìm thấy thư mục nguồn IPCAS!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                    int result = WNetAddConnection2(ref nr, password, username, 0);
+                    if (result != 0)
+                        throw new Exception("Không thể kết nối tới share mạng, mã lỗi: " + result);
 
-                // Nếu thư mục đích đã tồn tại thì xóa để replace
-                if (Directory.Exists(destinationFolder))
-                {
-                    Directory.Delete(destinationFolder, true); // xóa toàn bộ nội dung
-                }
+                    if (!Directory.Exists(sourceFolder))
+                        throw new Exception("Không tìm thấy thư mục nguồn @@@@PHIENBAN IPCAS!");
 
-                // Tạo lại thư mục đích
-                Directory.CreateDirectory(destinationFolder);
+                    if (Directory.Exists(destinationFolder))
+                        Directory.Delete(destinationFolder, true);
 
-                // Bắt đầu sao chép
-                CopyAllFiles(sourceFolder, destinationFolder);
+                    Directory.CreateDirectory(destinationFolder);
+
+                    CopyAllFiles(sourceFolder, destinationFolder);
+
+                    WNetCancelConnection2(networkPath, 0, true);
+                });
+
+                loadingForm.Close();
 
                 MessageBox.Show("Đã sao chép và thay thế IPCAS thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
+                loadingForm.Close();
                 MessageBox.Show("Lỗi khi sao chép IPCAS: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                try
+                {
+                    WNetCancelConnection2(networkPath, 0, true);
+                }
+                catch { }
             }
         }
+
         private void CopyAllFiles(string sourceDir, string targetDir)
         {
             // Copy tất cả file trong thư mục hiện tại
@@ -438,6 +551,26 @@ namespace supportlink
         {
             ScheduleForm scheduleForm = new ScheduleForm();
             scheduleForm.Show(); // hoặc dùng ShowDialog() nếu bạn muốn form này là modal
+        }
+
+        private void CreateDesktopShortcut()
+        {
+            string shortcutName = "SupportLink.lnk";
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string shortcutPath = Path.Combine(desktopPath, shortcutName);
+            string exePath = Application.ExecutablePath;
+
+            if (!System.IO.File.Exists(shortcutPath))
+            {
+                var shell = new IWshRuntimeLibrary.WshShell();
+                var shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(shortcutPath);
+
+                shortcut.Description = "Shortcut for SupportLink";
+                shortcut.TargetPath = exePath;
+                shortcut.WorkingDirectory = Path.GetDirectoryName(exePath);
+                shortcut.IconLocation = exePath; // <--- Gán icon từ chính file .exe
+                shortcut.Save();
+            }
         }
 
     }
